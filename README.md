@@ -1,6 +1,6 @@
 # Dos hacia atrás
 
-Desarrollado por Start Industries
+Desarrollado por Stark Industries
 
 ## Pantalla inicial
 
