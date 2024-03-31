@@ -152,5 +152,33 @@ body{
 
 
 }
+
+@media screen and (max-height: 400px){
+    html {
+      font-size: 10px;
+    }
+
+    .screen-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .count__text{
+        margin: 0 2rem;
+    }
+
+    .game__number{
+        font-size: 8rem;
+    }
+
+    .game__button{
+        font-size: 7rem;
+        padding: 0.625rem 5rem;
+    }
+
+}
   
   
