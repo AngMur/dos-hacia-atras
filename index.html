@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dos hacia atrás</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="screen-container">
+    <!-- Start screen -->
+    <div class="start screen" id="start">
+        <h1 class="noto-sans-bold start__title">Dos hacia atrás</h1>
+        <p class="noto-sans-normal start__description">Dos hacia atrás es un juego de agudeza mental que ejercita la memoria</p>
+        <br>
+        <div class="button-container">
+            <button class="start__button noto-sans-bold" onclick="startGame()">Comenzar</button>
+        </div>
+        <p class="noto-sans-normal start__explain">Pulsa el botón <strong>P</strong> si es distinto o el botón <strong>J</strong> si son iguales</p>
+        <div class="button-container">
+            <button class="start__help noto-sans-bold" onclick="showHelp()">?</button>
+        </div>
+    </div>
+    <!-- End start screen -->
+    <!-- Help screen -->
+    <div class="help screen" id="help">
+        <h1 class="noto-sans-bold help__title">¿Cómo se juega?</h1>
+        <p class="noto-sans-normal help__description">Se te mostrará un secuencia de números:</p>
+        <br>
+        <p class="noto-sans-normal help__description"><strong>1</strong>  2  2  <strong>1</strong>  3</p>
+        <br>
+        <p class="noto-sans-normal help__description">Debes seguir esa secuencia mentalmente...</p>
+        <br>
+        <br>
+        <p class="noto-sans-semibold help__description">Si se da el caso de los números en negrita debes indicar que son iguales, en todos los demás casos son diferentes.</p>
+        
+        <div class="button-container">
+            <button class="help__return noto-sans-bold" onclick="showStart()">Regresar</button>
+        </div>  
+    </div>
+    <!-- End help screen -->
+    <!-- Count screen -->
+    <div class="count screen" id="count">
+        <h1 class="count__text noto-sans-bold" id="count__text">El juego comenzara en: </h1>
+        <p class="count__number noto-sans-semibold" id="count__number"></p>
+    </div>
+    <!-- End count screen -->
+    <!-- Game screen -->
+    <div class="game screen" id="game">
+        <p class="game__number noto-sans-semibold" id="game__number"></p>
+        <div class="button-container gap">
+            <button class="game__button" id="p" class="boton" onclick="saveAnswer(false)">P</button>
+            <button class="game__button" id="j" class="boton" onclick="saveAnswer(true)">J</button>
+        </div>
+    </div>
+    <!-- End game screen -->
+    
+    <!-- Result screen -->
+    <div class="result screen" id="result">
+        <p class="result__text noto-sans-bold">Acertadas: <span id="result__correct"></span> de <span id="result__extend"></span></p>
+        <div class="button-container">
+            <button class="result__button noto-sans-bold" onclick="startGame()">Volver a jugar</button>  
+        </div>
+    </div>
+    <!-- End result screen -->
+    </div>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
